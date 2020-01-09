@@ -8,7 +8,7 @@ class ApplicationController < Sinatra::Base
     set :views, 'app/views'
   end
 
-  get '/' do
+  get "/" do
     redirect to "/articles"
   end
 
@@ -37,7 +37,7 @@ class ApplicationController < Sinatra::Base
   end
 
   # edit
-  get '/articles/:id/edit' do
+  get "/articles/:id/edit" do
     @article = Article.find(params[:id])
     erb :edit 
   end
